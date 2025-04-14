@@ -1,0 +1,198 @@
+.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+#game-area {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 150px);
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+#countdown{
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: rgb(255, 255, 255);
+}
+
+#click-count {
+    font-size: 10em;
+    margin: 0px 0;
+    color: rgb(255, 255, 255);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+button:hover {
+    background-color: #e3d9d9;
+}
+
+#reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    display: none;
+}
+
+#reset-button:hover {
+    background-color: #bbc3bb;
+}
+
+.hidden {
+    display: none;
+}
+
+#duration-bar {
+    position: absolute;
+    top: 30%;
+    right: 20px;
+    height: 50%;
+    width: 80px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+    color: white;
+}
+
+.duration-button {
+    margin: 10px 0;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.duration-button:hover {
+    background-color: #939793;
+}
+
+.duration-button.active {
+    background-color: #2272a7;
+}
+
+#end-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 100px;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    z-index: 1000;
+}
+
+#end-panel button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: white;
+}
+
+#end-panel button:hover {
+    background-color: #242525;
+}
+
+.container {
+    --uib-size: 45px;
+    --uib-color: white;
+    --uib-speed: 1s;
+    position: absolute;
+    height: var(--uib-size);
+    width: var(--uib-size);
+    pointer-events: none;
+}
+
+.container::before,
+.container::after,
+.dot::before,
+.dot::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: var(--uib-color);
+    animation: pulse var(--uib-speed) linear infinite;
+    transform: scale(0);
+    opacity: 0;
+    transition: background-color 0.3s ease;
+}
+
+.container::after {
+    animation-delay: calc(var(--uib-speed) / -4);
+}
+
+.dot::before {
+    animation-delay: calc(var(--uib-speed) * -0.5);
+}
+
+.dot::after {
+    animation-delay: calc(var(--uib-speed) * -0.75);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}

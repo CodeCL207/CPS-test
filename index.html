@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clic speed test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Clic speed test</h1>
+    </header>
+    <main id="game-area">
+        <div id="countdown">Temps restant : 10s</div>
+        <div id="click-count">0</div>
+        <button id="reset-button" class="hidden">Réinitialiser</button>
+    </main>
+    <div id="duration-bar">
+        <button class="duration-button" data-duration="2">2s</button>
+        <button class="duration-button" data-duration="3">3s</button>
+        <button class="duration-button" data-duration="5">5s</button>
+        <button class="duration-button" data-duration="10">10s</button>
+        <button class="duration-button" data-duration="15">15s</button>
+        <button class="duration-button" data-duration="30">30s</button>
+    </div>
+    <div id="end-panel" class="hidden">
+        <h2>Temps écoulé !</h2>
+        <p>Vous avez cliqué <span id="final-click-count">0</span> fois.</p>
+        <p>Votre vitesse de clic est de <span id="average-clicks">0</span> clics par secondes.</p>
+        <button id="restart-button">Rejouer</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
