@@ -83,13 +83,13 @@ button:hover {
 
 #duration-bar {
     position: absolute;
-    top: 50%;
-    right: 20px;
-    height: 300px;
-    width: 80px;
+    top: 20%;
+    right: 38%;
+    height: 50px;
+    width: 400px;
     border-radius: 5px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: linear; 
     justify-content: center; 
     align-items: center;
     background-color: #333;
@@ -98,7 +98,7 @@ button:hover {
 }
 
 .duration-button {
-    margin: 5px 0;
+    margin: 0px 5px;
     padding: 10px 15px;
     font-size: 1em;
     cursor: pointer;
