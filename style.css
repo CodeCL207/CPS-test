@@ -83,9 +83,9 @@ button:hover {
 
 #duration-bar {
     position: absolute;
-    top: 30%;
+    top: 50%;
     right: 20px;
-    height: 40%;
+    height: 300px;
     width: 80px;
     border-radius: 5px;
     display: flex;
